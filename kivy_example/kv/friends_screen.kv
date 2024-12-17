@@ -1,0 +1,13 @@
+<FriendsScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Friends'
+            font_size: 30
+        ScrollView:
+            BoxLayout:
+                id: friends_list
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height  # Important for scrolling
+                spacing: dp(5)

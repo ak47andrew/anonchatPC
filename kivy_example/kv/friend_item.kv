@@ -1,0 +1,28 @@
+<FriendItem>:
+    orientation: 'horizontal'
+    size_hint_y: None
+    height: dp(80)  # Fixed height for each friend item
+    padding: dp(10)
+    Image:
+        source: root.profile_pic
+        size_hint_x: None
+        width: dp(60)
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: root.name
+            font_size: 20
+            halign: 'left'
+            valign: 'middle'
+            text_size: self.size
+        Label:
+            text: root.last_message
+            font_size: 16
+            halign: 'left'
+            valign: 'middle'
+            text_size: self.size
+            color: 0.6, 0.6, 0.6, 1  # Grayish color for last message
+    Button:
+        size_hint: 1., 1.
+        background_color: 0,0,0,0
+        on_release: root.on_release_action()
