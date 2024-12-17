@@ -4,9 +4,11 @@ from screens.random_screen import RandomScreen
 from screens.friends_screen import FriendsScreen
 from kivy.uix.tabbedpanel import TabbedPanel, TabbedPanelHeader
 from kivy.uix.boxlayout import BoxLayout
+from kivy.lang import Builder
 
 class ChatApp(App):
     def build(self):
+        Builder.load_file('kv/friends_screen.kv')
         # Main layout with TabbedPanel at the bottom
         main_layout = BoxLayout(orientation='vertical')
 
